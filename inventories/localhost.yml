@@ -1,0 +1,6 @@
+all:
+  hosts:
+    localhost:
+      ansible_connection: local
+      proxy: http://proxy.univ-lyon1.fr:3128/
+      swap_file_size_mb: '512'

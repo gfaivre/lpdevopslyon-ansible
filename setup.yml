@@ -1,0 +1,15 @@
+- hosts: all
+  tasks:
+
+    - ansible.builtin.import_role:
+        name: manala.roles.apt
+    - ansible.builtin.import_role:
+        name: manala.roles.accounts
+
+    - name: Increase inotify user limit
+      sysctl:
+        name: fs.inotify.max_user_watches
+        value: "524288"
+        sysctl_set: yes
+      tags:
+        - inotify

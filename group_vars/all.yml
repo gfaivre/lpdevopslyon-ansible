@@ -1,0 +1,16 @@
+---
+
+manala_apt_packages:
+  - curl
+  - htop
+  - build-essential
+  - unzip
+  - zip
+  - fish
+  - rsync
+
+manala_accounts_users:
+  - user: debian
+    groups: ['sudo', 'www-data']
+    #authorized_keys:
+    #  - "{{ lookup('ansible.builtin.file', 'files/gfaivre-iut.pem') }}"
